@@ -1,0 +1,18 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NAMA: "fajrul falah"
+        NIM: "251552010016"
+        PRODI: "teknik informatika"
+        KAMPUS: "STMIK Tazkia"
+        MINAT: "Cloud Computing dan DevOps"
+        ALASAN: "Teknologi adalah kunci perubahan dunia. Saya ingin menjadi bagian dari inovasi yang memberikan dampak nyata bagi masyarakat."
+        CITA: "Menjadi profesional teknologi yang handal dan terus berkembang mengikuti kebutuhan industri digital masa depan."
+    image: profil-fajrul:latest
+    container_name: profil-fajrul
+    ports:
+      - "8101:80"   # port beda dari anggota kelompok lain
+    restart: unless-stopped
